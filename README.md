@@ -3,7 +3,6 @@ Grand Theft Auto 5 Casino Cheat by Addison Sawyer
 This cheat is for Grand Theft Auto 5 v1.0.2824.0
 
 Known Issues : 
-
 Issue - Sometimes the roulette winning number wont be replaced propperly making it act normaly. 
 Fix - UnAttach from game and leave the casino sit outside run around do whatever for 1 minute then enter the casino again, go sit at the roulette table and re-attach should fix the issue.
 
