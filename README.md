@@ -11,6 +11,7 @@ The game does have a way to prevent you from winnning a large amount of chips in
 To bypass this use the modded bet ammount this isnt seen as a large bet but rather 10 chips by the game so you'll be able to win as much as you like without getting a temp ban.
 
 Q : Is this detected?
+
 A : No you wont get banned as long as you dont PULL out over 100M chips per session, I pull out 50M chips then exit the game and re-launch then pull out more.
 
 Q : What roulette tables does this work with?
