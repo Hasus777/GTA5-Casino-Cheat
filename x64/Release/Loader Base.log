@@ -1,0 +1,29 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (GTA Menu.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  functions.cpp
+E:\Code\C++\GTA5 Cheat\functions.cpp(14,30): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Code\C++\GTA5 Cheat\functions.cpp(31,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Code\C++\GTA5 Cheat\functions.cpp(31,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Code\C++\GTA5 Cheat\functions.cpp(37,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  imguipp.cpp
+E:\Code\C++\GTA5 Cheat\imguipp.cpp(98,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\Code\C++\GTA5 Cheat\imguipp.cpp(98,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\Code\C++\GTA5 Cheat\imguipp.cpp(98,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\Code\C++\GTA5 Cheat\imguipp.cpp(98,19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx9.cpp
+  imgui_impl_win32.cpp
+  imgui_widgets.cpp
+  Loader.cpp
+E:\Code\C++\GTA5 Cheat\Loader.cpp(47,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Code\C++\GTA5 Cheat\Loader.cpp(48,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  memory.cpp
+  menu.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+E:\Code\C++\GTA5 Cheat\menu.cpp(271): warning C4715: 'FileBrowse': not all control paths return a value
+E:\Code\C++\GTA5 Cheat\Loader.cpp(122): warning C4715: 'WinMain': not all control paths return a value
+  All 2820 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Loader Base.vcxproj -> E:\Code\C++\GTA5 Cheat\x64\Release\GTA-Menu.exe
