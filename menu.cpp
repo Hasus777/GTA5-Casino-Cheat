@@ -312,18 +312,22 @@ void Menu::Render()
 	WriteProcessMemory(hProcess, (BYTE*)WinningNumHRAddr, &newWinningNumHR, sizeof(newWinningNumHR), nullptr);
 	// End Winning Num High Roller Cheat
 
-	// Bet Cheat
-	std::vector<unsigned int> BetOffset = { 0x30, 0x50, 0x1B8, 0xB8, 0x108, 0x34 };
-	uintptr_t BetAddr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, BetOffset);
+	// Find All Bets and Set Them To Modded Size
+	for (int i = 0; i < 7; i++)
+	{
+		unsigned int BetFinalOffset = 0x10 * i;
+		std::vector<unsigned int> Bet2Offset = { 0x30, 0x50, 0x1B8, 0xB8, 0x108, 0x34 + BetFinalOffset };
+		uintptr_t Bet2Addr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, Bet2Offset);
 
-	int currentBet = 0;
 
-	ReadProcessMemory(hProcess, (BYTE*)BetAddr, &currentBet, sizeof(currentBet), nullptr);
+		int currentBet = 0;
 
-	int newBet = Bet;
+		ReadProcessMemory(hProcess, (BYTE*)Bet2Addr, &currentBet, sizeof(currentBet), nullptr);
 
-	WriteProcessMemory(hProcess, (BYTE*)BetAddr, &newBet, sizeof(newBet), nullptr);
-	// End Bet Cheat
+		int newBet = Bet;
+
+		WriteProcessMemory(hProcess, (BYTE*)Bet2Addr, &newBet, sizeof(newBet), nullptr);
+	}
 
 	// Start Our Render
 	ImGui::Columns(2);
