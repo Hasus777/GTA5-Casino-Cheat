@@ -282,11 +282,11 @@ void Menu::Render()
 
 	hProcess = OpenProcess(PROCESS_ALL_ACCESS, NULL, procId);
 
-	uintptr_t dynamicPtrBaseAddr = moduleBase + 0x02931990; // This is the Player Address
+	uintptr_t dynamicPtrBaseAddr = moduleBase + 0x02932B08; // This is the Player Address
 	// Keep Max Cheats Out Here to Prevent Revert
 
 	// Winning Num Cheat
-	std::vector<unsigned int> WinningNumOffset = { 0x40, 0x8, 0x8, 0x8, 0x108, 0x4D8 };
+	std::vector<unsigned int> WinningNumOffset = { 0x10, 0x28, 0x8, 0x20, 0x18, 0x108, 0x4F0};
 	uintptr_t WinningNumAddr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, WinningNumOffset);
 
 	int currentWinningNum = 0;
@@ -299,24 +299,24 @@ void Menu::Render()
 	// End Winning Num Cheat
 
 	// Winning Num High Roller Cheat
-	std::vector<unsigned int> WinningNumHROffset = { 0x30, 0x8, 0x108, 0x4F0 };
+	//std::vector<unsigned int> WinningNumHROffset = { 0x30, 0x8, 0x108, 0x4F0 };
 
-	uintptr_t WinningNumHRAddr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, WinningNumHROffset);
+	//uintptr_t WinningNumHRAddr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, WinningNumHROffset);
 
-	int currentWinningNumHR = 0;
+	//int currentWinningNumHR = 0;
 
-	ReadProcessMemory(hProcess, (BYTE*)WinningNumHRAddr, &currentWinningNumHR, sizeof(currentWinningNumHR), nullptr);
+	//ReadProcessMemory(hProcess, (BYTE*)WinningNumHRAddr, &currentWinningNumHR, sizeof(currentWinningNumHR), nullptr);
 
-	int newWinningNumHR = 1;
+	//int newWinningNumHR = 1;
 
-	WriteProcessMemory(hProcess, (BYTE*)WinningNumHRAddr, &newWinningNumHR, sizeof(newWinningNumHR), nullptr);
+	//WriteProcessMemory(hProcess, (BYTE*)WinningNumHRAddr, &newWinningNumHR, sizeof(newWinningNumHR), nullptr);
 	// End Winning Num High Roller Cheat
 
 	// Find All Bets and Set Them To Modded Size
 	for (int i = 0; i < 7; i++)
 	{
 		unsigned int BetFinalOffset = 0x10 * i;
-		std::vector<unsigned int> Bet2Offset = { 0x30, 0x50, 0x1B8, 0xB8, 0x108, 0x34 + BetFinalOffset };
+		std::vector<unsigned int> Bet2Offset = { 0x10, 0x28, 0x48, 0x1B8, 0xB8, 0x378, 0x34 + BetFinalOffset };
 		uintptr_t Bet2Addr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, Bet2Offset);
 
 
